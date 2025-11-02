@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "SAVE_VARIABLE VARIABLE=fix_scv VALUE=1
+SAVE_VARIABLE VARIABLE=fix_e0011 VALUE=1
+SAVE_VARIABLE VARIABLE=fix_e0017 VALUE=1
+SAVE_VARIABLE VARIABLE=force_md5 VALUE=1
+SAVE_VARIABLE VARIABLE=close_dialogs VALUE=2
+">/tmp/printer
+
+echo "Recommend installed"
