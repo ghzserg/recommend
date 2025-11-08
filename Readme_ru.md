@@ -61,3 +61,9 @@ square_corner_velocity: 9
 [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Global_ru#close_dialogs)
 
 ```SAVE_ZMOD_DATA CLOSE_DIALOGS=2```
+
+## Исправление проблем с Wi-Fi
+
+[WIFI](https://github.com/ghzserg/zmod/wiki/Global_ru#wifi)
+
+```SAVE_ZMOD_DATA WIFI=1```
