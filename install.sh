@@ -16,21 +16,21 @@ NEED_RESTART=0
 [ "$VERSION" -lt 4 ] && echo "SAVE_VARIABLE VARIABLE=force_md5 VALUE=1" >/tmp/printer && NEED_RESTART=1
 [ "$VERSION" -lt 5 ] && echo "SAVE_VARIABLE VARIABLE=close_dialogs VALUE=2" >/tmp/printer && NEED_RESTART=1
 [ "$VERSION" -lt 6 ] && echo "SAVE_VARIABLE VARIABLE=wifi VALUE=1" >/tmp/printer && NEED_RESTART=1
-#if [ "$VERSION" -lt 7 ] && [ ${FF5X} -eq 1 ]; then
-#    current_value=$(sed -n '/\[heater_bed\]/,/^\[.*\]/ { /max_power/s/.*: *//p; }' printer.cfg | head -n1 | tr -d '\r\n')
-#
-#    if [ "$current_value" != "" ] && [ "$current_value" != "0.6" ]; then
-#        sed -i '/\[heater_bed\]/,/^\[.*\]/ s/^\(max_power:.*\)$/#\1\nmax_power: 0.6/' /opt/config/printer.cfg
-#        echo "[heater_bed] set max_power: 0.6"
-#        NEED_RESTART=1
-#    elif [ "$current_value" = "" ]; then
-#        sed -i '/\[heater_bed\]/a max_power: 0.6' /opt/config/printer.cfg
-#        echo "[heater_bed] set max_power: 0.6"
-#        NEED_RESTART=1
-#    fi
-#fi
+if [ "$VERSION" -lt 8 ] && [ ${FF5X} -eq 1 ]; then
+    current_value=$(sed -n '/\[heater_bed\]/,/^\[.*\]/ { /^max_power/s/.*: *//p; }' /opt/config/printer.cfg | head -n1 | tr -d '\r\n')
 
-echo 7 >version.txt
+    if [ "$current_value" != "" ] && [ "$current_value" != "0.6" ]; then
+        sed -i '/\[heater_bed\]/,/^\[.*\]/ s/^\(max_power:.*\)$/#\1\nmax_power: 0.6/' /opt/config/printer.cfg
+        echo "[heater_bed] set max_power: 0.6"
+        NEED_RESTART=1
+    elif [ "$current_value" = "" ]; then
+        sed -i '/\[heater_bed\]/a max_power: 0.6' /opt/config/printer.cfg
+        echo "[heater_bed] set max_power: 0.6"
+        NEED_RESTART=1
+    fi
+fi
+
+echo 8 >version.txt
 
 echo "Plugin ${PLUGIN_NAME} installed"
 
