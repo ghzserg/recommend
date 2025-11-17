@@ -27,6 +27,13 @@ speed: 2
 lift_speed: 5
 ```
 
+## Correct bed heating on AD5X
+
+```
+[heater_bed]
+max_power: 0.6
+```
+
 ## Correct SCV Settings
 
 [FIX_SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv)

@@ -27,6 +27,13 @@ speed:2
 lift_speed:5
 ```
 
+## Корректный нагрев стола на AD5X
+
+```
+[heater_bed]
+max_power: 0.6
+```
+
 ## Корректные настройки SCV
 
 [FIX_SCV](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv)
