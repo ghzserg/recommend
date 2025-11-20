@@ -10,6 +10,10 @@
 2. [Обновите zMod](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0)
 3. Выполните команду: ```ENABLE_PLUGIN name=recommend```
 
+Для отключения сообщения: `А вы не забыли включить рекомендуемые параметры? ENABLE_PLUGIN name=recommend`
+
+Use: ```SAVE_VARIABLE VARIABLE=no_recommend VALUE=1```
+
 # Удаление
 
 Выполните команду: ```DISABLE_PLUGIN name=recommend```

@@ -10,6 +10,10 @@ To use this mod with your Flashforge AD5X/AD5M/AD5M Pro:
 2. [Update zMod](https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod)
 2. Run the command: ```ENABLE_PLUGIN name=recommend```
 
+To disable message: `Have you forgotten to enable the recommended parameters? ENABLE_PLUGIN name=recommend`
+
+Use: ```SAVE_VARIABLE VARIABLE=no_recommend VALUE=1```
+
 # Removal
 
 Run the command: ```DISABLE_PLUGIN name=recommend```
