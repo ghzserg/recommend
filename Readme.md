@@ -20,6 +20,10 @@ Run the command: ```DISABLE_PLUGIN name=recommend```
 
 # List of Settings Included in the Plugin
 
+## Enables nozzle impact control
+
+[NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control)
+
 ## More Accurate Bed Mesh Calibration
 ```
 [bed_mesh]

@@ -29,8 +29,15 @@ if [ "$VERSION" -lt 8 ] && [ ${FF5X} -eq 1 ]; then
         NEED_RESTART=1
     fi
 fi
+if [ "$VERSION" -lt 9 ]; then
+    if ! grep -q max_temp /opt/config/mod_data/nozzle.cfg; then
+        echo "[temperature_sensor weightValue]
+max_temp: 1500" >/opt/config/mod_data/nozzle.cfg
+        NEED_RESTART=1
+    fi
 
-echo 8 >version.txt
+fi
+echo 9 >version.txt
 
 echo "Plugin ${PLUGIN_NAME} installed"
 

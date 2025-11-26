@@ -20,6 +20,10 @@ Use: ```SAVE_VARIABLE VARIABLE=no_recommend VALUE=1```
 
 # Список настроек входящих в плагин
 
+## Включает контроль удара сопла о стол
+
+[NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control)
+
 ## Более точное снятие карты стола
 ```
 [bed_mesh]
