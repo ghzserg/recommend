@@ -7,7 +7,8 @@ grep -q "include plugins/${PLUGIN_NAME}/${PLUGIN_NAME}.cfg" /opt/config/mod_data
 source /opt/config/mod/.shell/0.sh
 
 VERSION=$(cat version.txt 2>/dev/null)
-[ "${VERSION}"=="" ] && VERSION=0
+
+[ "${VERSION}" == "" ] && VERSION=0
 NEED_RESTART=0
 
 [ "$VERSION" -lt 1 ] && echo "SAVE_VARIABLE VARIABLE=fix_scv VALUE=1" >/tmp/printer && NEED_RESTART=1
