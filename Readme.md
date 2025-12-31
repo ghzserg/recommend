@@ -22,7 +22,7 @@ Run the command: ```DISABLE_PLUGIN name=recommend```
 
 ## Enables nozzle impact control
 
-[NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control)
+[NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control)
 
 ## More Accurate Bed Mesh Calibration
 ```
