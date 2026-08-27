@@ -4,7 +4,8 @@ PLUGIN_NAME=recommend
 
 grep -q "include plugins/${PLUGIN_NAME}/${PLUGIN_NAME}.cfg" /opt/config/mod_data/plugins.cfg || exit 0
 
-source /opt/config/mod/.shell/0.sh
+[ -f /opt/config/mod/.shell/0.sh ] && source /opt/config/mod/.shell/0.sh
+[ -f /usr/data/zmod/zmod/.shell/0.sh ] && source /usr/data/zmod/zmod/.shell/0.sh
 
 VERSION=$(cat version.txt 2>/dev/null)
 
