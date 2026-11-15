@@ -39,7 +39,11 @@ max_temp: 1500" >/opt/config/mod_data/nozzle.cfg
     fi
 
 fi
-echo 9 >version.txt
+[ "$VERSION" -lt 10 ] && [ ${C5PRO} -eq 1 ] && echo "SAVE_VARIABLE VARIABLE=klipper_c5 VALUE=1" >/tmp/printer && NEED_RESTART=1
+[ "$VERSION" -lt 11 ] && [ ${C5PRO} -eq 1 ] && echo "SAVE_VARIABLE VARIABLE=afc VALUE=1" >/tmp/printer && NEED_RESTART=1
+[ "$VERSION" -lt 12 ] && [ ${C5PRO} -eq 1 ] && echo "SAVE_VARIABLE VARIABLE=orca_ff VALUE=1" >/tmp/printer && NEED_RESTART=1
+[ "$VERSION" -lt 12 ] && [ ${AD5X} -eq 1 ] && echo "SAVE_VARIABLE VARIABLE=orca_ff VALUE=1" >/tmp/printer && NEED_RESTART=1
+echo 12 >version.txt
 
 echo "Plugin ${PLUGIN_NAME} installed"
 
